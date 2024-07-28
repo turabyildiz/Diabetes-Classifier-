@@ -1,9 +1,11 @@
 Data Science Final Project
 
 
-Project/Goals
+Project/Goals/Hypothesis
 
 The project aims to predict diabetes status (no diabetes, prediabetes, and diabetes) using machine learning algorithms. The primary goal is to understand how various features impact diabetes status and develop a predictive model to accurately estimate diabetes status based on these features.
+
+My hypothesis is, among the features in the dataset, 'GenHlth', 'BMI', 'PhysActivity', 'HighBP', and 'Age' will have the most significant impact on predicting the presence of diabetes.
 
 
 Process
