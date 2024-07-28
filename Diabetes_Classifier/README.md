@@ -42,7 +42,7 @@ Evaluated model performance using metrics such as F1 score, precision, recall, a
 
 Results
 
-Some predictions made by the Gradient Boosting model on the test dataset:
+Some original predictions made by the Gradient Boosting model on the test dataset:
 
 Class 0: precision 0.79, recall 0.81, f1-score 0.80, support 42740
 Class 1: precision 0.70, recall 0.68, f1-score 0.69, support 42741
@@ -51,6 +51,8 @@ Overall accuracy is 0.69, with macro and weighted averages of precision, recall,
 
 ![alt text](img/metrics.png)
 
+
+I tuned and evaluated again afterwards, getting better results.
 
 Challenges
 
