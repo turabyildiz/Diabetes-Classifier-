@@ -1,77 +1,60 @@
-Data Science Final Project
+# Data Science Final Project: Diabetes Prediction
 
+## Project Overview
+Diabetes is a growing health concern worldwide, affecting millions of people. This project leverages machine learning to predict diabetes status (no diabetes, prediabetes, and diabetes) using health indicators, aiming to assist in early detection and prevention.
 
-Project/Goals/Hypothesis
+### **Goals & Hypothesis**
+The primary goal is to develop a predictive model to estimate diabetes status based on various health indicators. 
 
-The project aims to predict diabetes status (no diabetes, prediabetes, and diabetes) using machine learning algorithms. The primary goal is to understand how various features impact diabetes status and develop a predictive model to accurately estimate diabetes status based on these features.
+**Hypothesis:** Among the dataset features, `GenHlth`, `BMI`, `PhysActivity`, `HighBP`, and `Age` will have the most significant impact on predicting diabetes.
 
-My hypothesis is, among the features in the dataset, 'GenHlth', 'BMI', 'PhysActivity', 'HighBP', and 'Age' will have the most significant impact on predicting the presence of diabetes.
+---
+## **Process**
 
+### 1️⃣ **Data Collection & Preprocessing**
+- Acquired diabetes dataset from Kaggle.
+- Cleaned the dataset, handling missing values, outliers, and inconsistencies.
+- Applied feature encoding and scaling to ensure data was machine-learning ready.
 
-Process
+### 2️⃣ **Exploratory Data Analysis (EDA)**
+- Analyzed feature distributions and relationships using **visualizations**.
+- Identified correlations between features and the target variable.
 
-
-Step 1: Data Collection and Preprocessing
-
-Acquired diabetes dataset from Kaggle
-
-Explored and cleaned the dataset to handle missing values, outliers, and inconsistencies.
-
-
-Step 2: Exploratory Data Analysis
-
-Conducted exploratory data analysis to understand the distribution and relationships between different features and the target variable (diabetes status).
-
-Visualized key insights using plots and charts to identify patterns and correlations:
-
+**Example Insights:**
 ![Alt text](img/output.png)
 
+### 3️⃣ **Model Training & Selection**
+- Split data into **training and testing sets**.
+- Trained multiple models: **Logistic Regression, SVM, Gradient Boosting, Neural Networks, Random Forest**.
+- Compared performance using **F1 score, precision, recall, and classification reports**.
+- **Final choice:** Gradient Boosting due to its superior handling of imbalanced classes and feature interactions.
 
-
-Step 3: Model Training and Evaluation
-
-Split the data into training and testing sets.
-
-Trained multiple machine learning models (e.g., logistic regression, SVM, gradient boosting, neural network, random forest) to predict diabetes status.
-
-I originally went with Random Forest, but changed it to Gradient Boost after comparing it with other models.
-
-Evaluated model performance using metrics such as F1 score, precision, recall, and classification report.
-
-
-
-Results
-
-Some original predictions made by the Gradient Boosting model on the test dataset:
-
-Class 0: precision 0.79, recall 0.81, f1-score 0.80, support 42740
-Class 1: precision 0.70, recall 0.68, f1-score 0.69, support 42741
-Class 2: precision 0.59, recall 0.59, f1-score 0.59, support 42741
-Overall accuracy is 0.69, with macro and weighted averages of precision, recall, and F1-score also around 0.69.
+---
+## **Results**
+### **Final Model Performance (Gradient Boosting)**
+| Class | Precision | Recall | F1 Score | Support |
+|-------|----------|--------|----------|---------|
+| **0** | 0.79 | 0.81 | 0.80 | 42,740 |
+| **1** | 0.70 | 0.68 | 0.69 | 42,741 |
+| **2** | 0.59 | 0.59 | 0.59 | 42,741 |
+| **Overall Accuracy** | | | **0.69** | |
 
 ![alt text](img/metrics.png)
 
+🔹 **Key Takeaway:** The model performs well, especially for **Class 0 and Class 1**, but could be further improved for **Class 2**.
 
-I tuned and evaluated again afterwards, getting better results.
+---
+## 🛠️ **Challenges & Lessons Learned**
+- **Data Cleaning:** Required extensive handling of missing values and outliers, reinforcing the importance of preprocessing.
+- **Model Selection:** Comparing multiple models helped me understand the trade-offs between accuracy, interpretability, and training time.
+- **Hyperparameter Tuning:** Implementing **GridSearchCV & RandomizedSearchCV** significantly improved performance.
 
-Challenges
+---
+## **Future Enhancements**
+- **Feature Engineering:** Explore additional transformations and external data sources to improve predictions.
+- **Advanced Model Tuning:** Use ensemble methods like **Stacking or Boosting** to improve accuracy.
+- **Deployment:** Build an interactive web app to make real-time predictions.
 
-The dataset required extensive cleaning and preprocessing to handle missing values, outliers, and inconsistencies. This process was time-consuming and required careful consideration to ensure data quality.
-Selecting the right model and hyperparameters.
-
-Time constraints.
-
-Deciding which metrics to use for model evaluation.
-
-
-Future Goals
-
-If more time were available, I would focus on the following tasks to enhance the project:
-
-Feature Engineering:
-
-Invest more time in feature engineering to extract additional insights from the dataset. It could involve creating new features, transforming existing ones, or incorporating external data sources to enrich the feature set.
-
-Model Tuning and Ensemble Methods: 
-
-I would conduct more extensive hyperparameter tuning for the machine learning models to improve their performance. Also, explore ensemble methods such as stacking or boosting to combine the strengths of multiple models for better prediction accuracy.
+---
+### **Final Thoughts**
+This project deepened my understanding of **machine learning pipelines, feature selection, model tuning, and real-world ML challenges**. I'm excited to continue refining and expanding this work! 
